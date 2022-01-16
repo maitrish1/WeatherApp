@@ -34,15 +34,15 @@ async function getData(city){
 
     if(data.list[0].weather[0].main==='Clouds'){
         console.log('clouds')
-        body.style.backgroundImage="url('cloudy.jpg')"
+        body.style.backgroundImage="url('clouds1.jpg')"
     }
     else if(data.list[0].weather[0].main==='Rain'){
         console.log('rain')
-        body.style.backgroundImage="url('rain1.jpg')"
+        body.style.backgroundImage="url('rain3.jpg')"
     }
     else if(data.list[0].weather[0].main==='Clear'){
         console.log('clear')
-        body.style.backgroundImage="url('clear_sky.jpg')"
+        body.style.backgroundImage="url('sunny1.jpg')"
     }
     else if(data.list[0].weather[0].main==='Snow'){
         console.log('clear')
