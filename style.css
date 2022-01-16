@@ -31,17 +31,9 @@ body{
     gap:3em;
     
     border-radius: 15px;
-    overflow: scroll;
+    
 }
-.container::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+
 .container::after{
     content: "";
     background-color: black;
@@ -50,7 +42,7 @@ body{
     height: 100%;
     opacity: 0.4;
     z-index: -1;
-    height: 170vh;
+  
     border-radius: 14px;
 }
 #city{

@@ -25,6 +25,9 @@ async function getData(city){
     mainDescDisplay.innerHTML=data.list[0].weather[0].main
 
    
+    const scrollAble=document.querySelector('.scrollable')
+
+
     for(let i=0;i<=5;i++){
         let html=document.createElement('div')
         html=`Temperature : ${Math.ceil(data.list[i].main.temp)} ℃`
