@@ -8,11 +8,13 @@ let container=document.querySelector('.container')
 let body=document.querySelector('body')
 
 function getInputValue() {
+    
     let city=document.getElementById('city').value
     getData(city)
   }
 
 async function getData(city){
+    
     let value=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=c7fc272a3b2073c04bca466851d816df`)
     const data=await value.json()
     console.log(data)
@@ -22,21 +24,28 @@ async function getData(city){
     feelsLikeDisplay.innerHTML=`Feels like : ${Math.floor(data.list[0].main.feels_like)} ℃`
     mainDescDisplay.innerHTML=data.list[0].weather[0].main
 
+   
+    for(let i=0;i<=5;i++){
+        let html=document.createElement('div')
+        html=`Temperature : ${Math.ceil(data.list[i].main.temp)} ℃`
+        container.appendChild=html
+    }
+
 
     if(data.list[0].weather[0].main==='Clouds'){
         console.log('clouds')
-        body.style.backgroundColor="#4a4a46"
+        body.style.backgroundImage="url('cloudy.jpg')"
     }
     else if(data.list[0].weather[0].main==='Rain'){
         console.log('rain')
-        body.style.backgroundColor="#878468"
+        body.style.backgroundImage="url('rain1.jpg')"
     }
     else if(data.list[0].weather[0].main==='Clear'){
         console.log('clear')
-        body.style.backgroundColor="#35b4de"
+        body.style.backgroundImage="url('clear_sky.jpg')"
     }
     else if(data.list[0].weather[0].main==='Snow'){
         console.log('clear')
-        body.style.backgroundColor="#cccfd9"
+        body.style.backgroundImage="url('snow.jpg')"
     }
 }
