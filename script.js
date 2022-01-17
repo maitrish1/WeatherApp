@@ -49,6 +49,6 @@ async function getData(city){
     }
     else if(data.list[0].weather[0].main==='Snow'){
         console.log('clear')
-        body.style.backgroundImage="url('snow.jpg')"
+        body.style.backgroundImage="url('snow2.jpg')"
     }
 }
